@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import tasks from "../data/tasks";
 
-// Имитация асинхронного запроса
+
 export const fetchTasks = createAsyncThunk("tasks/fetchTasks", async () => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -14,7 +14,7 @@ const tasksSlice = createSlice({
   name: "tasks",
   initialState: {
     items: [],
-    status: "idle", // idle | loading | succeeded | failed
+    status: "idle", 
   },
   reducers: {},
   extraReducers: (builder) => {
